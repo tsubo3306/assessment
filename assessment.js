@@ -35,7 +35,9 @@ assessmentButton.onclick = () => {
 
     removeAllChildren(tweetDivided);
     const a = document.createElement('a');
-    const href = "https://twitter.com/intent/tweet?button_hashtag=あなたのいいところ&ref_src=twsrc%5Etfw";
+    const href = 'https://twitter.com/intent/tweet?button_hashtag='+
+        encodeURIComponent('あなたのいいところ') + 
+        '&ref_src=twsrc%5Etfw';
     a.setAttribute('href', href);
     a.className = "twitter-hashtag-button";
     a.setAttribute('data-text', result);
